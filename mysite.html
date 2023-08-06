@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Content</title>
+  <script>
+    fetch('https://www.bbc.com')
+      .then(response => response.text())
+      .then(data => {
+        const container = document.getElementById('walmartContainer');
+        container.innerHTML = data;
+      });
+
+    fetch('https://www.lps.org')
+      .then(response => response.text())
+      .then(data => {
+        const container = document.getElementById('googleContainer');
+        container.innerHTML = data;
+      });
+  </script>
+</head>
+<body>
+  <h1>Website Content</h1>
+  <h2>Walmart</h2>
+  <div id="walmartContainer"></div>
+  <h2>Amazon</h2>
+  <div id="amazonContainer"></div>
+  <h2>Google</h2>
+  <div id="googleContainer"></div>
+</body>
+</html>
